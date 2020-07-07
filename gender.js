@@ -1,22 +1,22 @@
 // Load and munge data, then make the visualization.
-var fileName = "./csv_suicide_by_age.csv";
-var ageRanges = ["70+","50-69","All ages","5-14","15-49"];
+var fileName = "./csv_suicide_by_gender.csv";
+var genderList = ["female","male","both sexes"];
 
 d3.csv(fileName, function(error, data) {
-    var ageMap = {};
+    var genderMap = {};
     data.forEach(function(d) {
         var country = d.country;
-        ageMap[country] = [];
+        genderMap[country] = [];
 
         
-        ageRanges.forEach(function(range) {
-            ageMap[country].push( +d[range] );
+        genderList.forEach(function(gender) {
+            genderMap[country].push( +d[gender] );
         });
     });
-    makeVis(ageMap);
+    makeVis(genderMap);
 });
 
-var makeVis = function(ageMap) {
+var makeVis = function(genderMap) {
     // Define dimensions of vis
     var margin = { top: 30, right: 50, bottom: 30, left: 50 },
         width  = 550 - margin.left - margin.right,
@@ -24,7 +24,7 @@ var makeVis = function(ageMap) {
 
     // Make x scale
     var xScale = d3.scale.ordinal()
-        .domain(ageRanges)
+        .domain(genderList)
         .rangeRoundBands([0, width], 0.1);
 
     // Make y scale, the domain will be defined on bar update
@@ -32,7 +32,7 @@ var makeVis = function(ageMap) {
         .range([height, 0]);
 
     // Create canvas
-    var canvas = d3.select("#vis-container")
+    var canvas = d3.select("#genderbar")
       .append("svg")
         .attr("width",  width  + margin.left + margin.right)
         .attr("height", height + margin.top  + margin.bottom)
@@ -76,7 +76,7 @@ var makeVis = function(ageMap) {
         bars.enter()
           .append("rect")
             .attr("class", "bar")
-            .attr("x", function(d,i) { return xScale( ageRanges[i] ); })
+            .attr("x", function(d,i) { return xScale( genderList[i] ); })
             .attr("width", xScale.rangeBand())
             .attr("y", function(d,i) { return yScale(d); })
             .attr("height", function(d,i) { return height - yScale(d); });
@@ -94,26 +94,26 @@ var makeVis = function(ageMap) {
     // Handler for dropdown value change
     var dropdownChange = function() {
         var newCountry = d3.select(this).property('value'),
-            newData   = ageMap[newCountry];
+            newData   = genderMap[newCountry];
 
         updateBars(newData);
     };
 
     // Get names of countries, for dropdown
-    var countries = Object.keys(ageMap).sort();
+    var countries = Object.keys(genderMap).sort();
 
-    var dropdown = d3.select("#vis-container")
+    var dropdown = d3.select("#genderbar")
         .insert("select", "svg")
         .on("change", dropdownChange);
 
     dropdown.selectAll("option")
         .data(countries)
-      .enter().append("option")
+        .enter().append("option")
         .attr("value", function (d) { return d; })
         .text(function (d) {
             return d[0].toUpperCase() + d.slice(1,d.length); // capitalize 1st letter
         });
 
-    var initialData = ageMap[ countries[0] ];
+    var initialData = genderMap[ countries[0] ];
     updateBars(initialData);
 };

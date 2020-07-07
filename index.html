@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Explore Suicide Data</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href = "chorostyle.css">
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <style>
         body {
@@ -24,10 +27,33 @@
         }
         </style>
     </head>
-    <body>
-        <div id='vis-container'></div>
-        <script type="text/javascript" src="app.js" >
-          
-        </script>
-    </body>
+
+    <body> 
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12 jumbotron text-center">
+                <h1> Suicide rates - World , 1950 - 2017 .</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+              </div>
+            </div>
+          </div>
+    
+
+    <!-- Visualizations -->
+    
+    <a href = "choropleth.html" > Suicides using a Geo Map</a><br><br>
+    <a href = "age.html" > Suicides Rates by Age </a> <br><br>
+    <a href = "gender.html"> Suicide Rates by Gender  </a> 
+        
+    
+   
+    <script type="text/javascript" src="gender.js"> </script>
+    <script type="text/javascript" src="age.js"> </script>
+    <script type="text/javascript" src="map.js"> </script>
+
+</body>
+
+
+
+
 </html>
