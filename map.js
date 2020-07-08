@@ -1,4 +1,5 @@
-var width = 1000,
+
+ var width = 1000,
     height = 550,
     center = [width / 2, height / 2],
     defaultFill = "#e0e0e0";
