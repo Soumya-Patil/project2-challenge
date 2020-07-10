@@ -1,3 +1,4 @@
+function init() {
 // Load and munge data, then make the visualization.
 var fileName = "./csv_suicide_by_gender.csv";
 var genderList = ["female","male","both sexes"];
@@ -117,3 +118,6 @@ var makeVis = function(genderMap) {
     var initialData = genderMap[ countries[0] ];
     updateBars(initialData);
 };
+}
+// Initialize the dashboard
+init();

@@ -1,3 +1,4 @@
+function init() {
 // Load and munge data, then make the visualization.
 var fileName = "./csv_suicide_by_age.csv";
 var ageRanges = ["70+","50-69","All ages","5-14","15-49"];
@@ -117,3 +118,6 @@ var makeVis = function(ageMap) {
     var initialData = ageMap[ countries[0] ];
     updateBars(initialData);
 };
+}
+// Initialize the dashboard
+init();
