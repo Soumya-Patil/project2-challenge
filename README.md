@@ -6,7 +6,7 @@
 - Python’s Pandas was used to clean the dataset .
 -	HTML and CSS’s Bootstrap  were used to create and layout the webpage 
 -	Javascript library D3  was used to map the data  and create dashboards.
--  ALso, *D3-geomap* library was used for creating geographic map. 
+-  ALso, D3-geomap library was used for creating geographic map. 
 -	A flask app in Python was used to serve the webpages
 - And finally it was deployed on Github.
 
