@@ -1,9 +1,10 @@
-function init() {
+function age_init() { 
 // Load and munge data, then make the visualization.
-var fileName = "./csv_suicide_by_age.csv";
+var fileName = "static/csv_suicide_by_age.csv";
 var ageRanges = ["70+","50-69","All ages","5-14","15-49"];
 
 d3.csv(fileName, function(error, data) {
+    console.log("Fail:Parameters:",error,data);
     var ageMap = {};
     data.forEach(function(d) {
         var country = d.country;
@@ -119,5 +120,5 @@ var makeVis = function(ageMap) {
     updateBars(initialData);
 };
 }
-// Initialize the dashboard
-init();
+
+age_init();

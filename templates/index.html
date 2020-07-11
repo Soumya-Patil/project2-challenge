@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Exploratory Dashboard for Global Suicide rates</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename = 'main.css')}}">
   
 </head>
 
@@ -72,9 +72,10 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.9.0/d3-legend.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
-  <script src="map.js"></script>
-  <script src="age.js"></script>
-  <script src="gender.js"></script>
+
+  <script src="{{url_for('static',filename='map.js')}}"></script>
+  <script src="{{url_for('static',filename='age.js')}}"></script>
+  <script src="{{url_for('static',filename='gender.js')}}"></script>
 
 </body>
 

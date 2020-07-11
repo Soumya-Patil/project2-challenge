@@ -1,9 +1,10 @@
-function init() {
+function gender_init() {
 // Load and munge data, then make the visualization.
-var fileName = "./csv_suicide_by_gender.csv";
+var fileName = "static/csv_suicide_by_gender.csv";
 var genderList = ["female","male","both sexes"];
 
 d3.csv(fileName, function(error, data) {
+    console.log("Fail:Parameters:",error,data);
     var genderMap = {};
     data.forEach(function(d) {
         var country = d.country;
@@ -119,5 +120,5 @@ var makeVis = function(genderMap) {
     updateBars(initialData);
 };
 }
-// Initialize the dashboard
-init();
+
+gender_init();
