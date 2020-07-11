@@ -12,6 +12,12 @@ https://soumya-patil.github.io/project2-challenge/.
 
 # Visualizations : 
 - The Dashboard has a total of 3 Visualizations , 
-1.	A 
-2.	
+1. A 
+2. An interactive Bar chart on the bottom left where you see suicide rates broken down by age group. Use the dropdown menu to make a country selection.
+   These rates are given as the number of suicide deaths per 100,000 people in a given demographic.
+3. Another Interactive bar  chart on the bottom right that compares suicide rates in men (shown on the y-axis) versus rates in women (shown on the x-axis).
+   These rates are also given as the number of suicide deaths per 100,000 people in a given demographic.
+
+
+
 
