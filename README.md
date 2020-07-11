@@ -1,6 +1,5 @@
 
-Please Click here to Visit the Deployed Dashboard 
-https://soumya-patil.github.io/project2-challenge/.
+
 
 # Coding Approach :
 - 	We chose a relational DBMS , Postgres as our Database because the data  was mainly read in as tables (CSVs , JSONs- geoJSON and topoJSON) , and thus it was easier to pre-define schema ;  Postgres seemed  best fit. 
