@@ -12,7 +12,7 @@
 
 # Visualizations : 
 - The Dashboard has a total of 3 Visualizations , 
-1. A Choropleth map showing suicide deaths per 100,000 people across 198 countries . A tool tip details a line chart of suicide deaths per 100,000 people from the year 1950 - 2017. 
+1. A Choropleth map showing suicide deaths per 100,000 people across 198 countries . A tool tip details a line chart of suicide deaths per 100,000 people from the year 1954 - 2005. 
 
 
 2. An interactive Bar chart on the bottom left where you see suicide rates broken down by age group. Use the dropdown menu to make a country selection.
