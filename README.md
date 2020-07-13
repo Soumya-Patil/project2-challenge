@@ -21,7 +21,3 @@
    These rates are also given as the number of suicide deaths per 100,000 people in a given demographic.
 
 
-
->>>>>>> e7bd2cbc81e2f0adc4bd313f3fe4b3acdb0ab8f8
-
-Another Interactive bar chart on the bottom right that compares suicide rates in men (shown on the y-axis) versus rates in women (shown on the x-axis). These rates are also given as the number of suicide deaths per 100,000 people in a given demographic.
